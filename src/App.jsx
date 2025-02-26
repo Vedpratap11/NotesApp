@@ -1,9 +1,10 @@
 import { TiDeleteOutline } from "react-icons/ti";
+import { MdModeEdit } from "react-icons/md";
 import { useState } from "react";
 function App() {
   const [allMessage, setAllMessage] = useState([]);
   const [text, setText] = useState();
-  const [color, setColor] = useState();
+  const [color, setColor] = useState("#000000");
   const [undoNote, setUndoNote] = useState([]);
 
   function handleNote(e) {
@@ -26,6 +27,10 @@ function App() {
     const note = allMessage;
     const lastCreatedNote = note.pop();
     setUndoNote((prev) => [...prev, lastCreatedNote]);
+  }
+
+  function handleEdit(){
+    
   }
 
   return (
@@ -61,7 +66,7 @@ function App() {
               key={item.id}
               style={{ backgroundColor: item.Color }}
               className="note"
-            >
+            > <MdModeEdit className="edit" />
               <span className="cross" onClick={() => handleDeleteNote(item.id)}>
                 <TiDeleteOutline />
               </span>

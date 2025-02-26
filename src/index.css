@@ -71,6 +71,12 @@ top: 1px;
 right: 1px;
 font-size: 20px;
 }
+.edit{
+  position: absolute;
+  top: 1px;
+ right: 25px;
+ font-size: 18px;
+}
 .message{
   width: 13rem;
   height: 10rem;
